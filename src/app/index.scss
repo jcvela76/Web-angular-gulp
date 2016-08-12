@@ -1,0 +1,304 @@
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+ */
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+body{
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	background: #000000;
+	font-family: "magistral-web",sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	
+}
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: 200px;
+
+  img.pull-right {
+    width: 50px;
+  }
+}
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector
+//----------------
+#container { display:block; }
+
+
+#layer, #layer_intro{
+	width: 1920px;
+	height: 1080px;
+	overflow: hidden;
+	position: absolute;
+	/*background: rgba(29, 37, 57, 0.8);*/
+	
+}
+.video-background{
+	/*opacity: 0.25*/
+}
+#video-background { 
+	position: absolute;
+	overflow: hidden;
+}
+
+.hide{
+	display: none;
+}
+#layer_intro{
+	text-align: center;
+	padding-top: 505px;
+	background-image: url("../assets/images/black-squares.png");
+}
+#layer_intro h1{
+	font-size: 60px;
+	display: initial;
+	display: -webkit-inline-box;
+	/*font-family: 'Helvetica';*/
+	color: #f6f6f6;
+	text-shadow: rgba(10,26,26,1) 0px 8px 8px;
+	font-weight: normal;
+	letter-spacing: 3px;
+	margin: 20px auto;
+}
+#coming{
+	margin: 0 auto;
+	color: #fff;
+	display: none;
+	font-size: 30px;
+	text-shadow: rgba(10,26,26,1) 0px 8px 8px;
+	letter-spacing: 3px;
+}
+#scroll_sign{
+
+	background: transparent;
+	font-size: 40px;
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+	-ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    animation-timing-function:ease-in-out;
+    -webkit-animation-timing-function: ease-out;
+    color: #fff;
+    font-family: "program";
+}
+
+#scroll_sign{
+	display: none;
+	-webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 3s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    position: relative;
+    text-shadow: rgba(10,26,26,1) 0px 5px 5px;
+}
+
+
+@-webkit-keyframes example {
+    0%   {top:-10px;}
+
+    50%  {top:50px; opacity: 0.5;}
+
+    100% {top:-10px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {top:-10px;}
+
+    50%  {top:50px; opacity: 0.5;}
+
+    100% {top:-10px;}}
+
+#promt_{
+	-webkit-animation-name: blink_promt; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-name: blink_promt;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes blink_promt {
+    0%   {opacity: 0}
+
+    100% {opacity: 1}
+}
+
+/* Standard syntax */
+@keyframes blink_promt {
+        0%   {opacity: 0}
+
+    100% {opacity: 1}
+}
+
+.fancy {
+  line-height: 0.5;
+  text-align: center;
+}
+.fancy div {
+  display: inline-block;
+  position: relative;  
+  color: #fff;
+	font-size: 35px;
+	line-height: 45px;
+	border: 3px solid transparent;
+	padding: 0px 10px;
+	text-shadow: rgba(10,26,26,1) 0px 5px 5px;
+	margin: 15px;
+	-webkit-transition: border 0.2s linear 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: border 0.2s linear 0.5s;
+    cursor: pointer;
+    display: none;
+}
+.fancy div:before,
+.fancy div:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+  top: 20px;
+  width: 100%;
+  -webkit-transition: width 2s linear 0.1s; /* For Safari 3.1 to 6.0 */
+  transition: width 0.2s linear 0.1s;
+  pointer-events : none;
+}
+.fancy div:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.fancy div:after {
+  left: 100%;
+  margin-left: 15px;
+}
+.fancy div:hover{
+	border: 3px solid #fff;
+}
+.fancy div:hover:after, .fancy div:hover:before {
+	width: 0;
+}
+
+
+.open_menu{
+	display: block;
+	background: #fff;
+	height: 1000px;
+}
+
+#close_ico{
+	position: fixed;
+	z-index: 1000;
+	color: rgb(255, 255, 255);
+	top: 0px;
+	right: 0px;
+	padding: 20px;
+	cursor: pointer;
+	font-size: 20px;
+	display: none;
+}
+
+/*Menu css animation */
+
+#menu1, #menu2, #menu3, #menu4 {
+  -webkit-transition: width 2s ease, height 2s ease, background 2s ease;
+  -moz-transition: width 2s ease, height 2s ease, background 2s ease;
+  -o-transition: width 2s ease, height 2s ease, background 2s ease;
+  transition: width 2s ease, height 2s ease, background 2s ease;
+ 	height: 48px;
+	margin: 20px auto;
+	padding: 0px 21px;
+	box-sizing: content-box;
+}
+#menu1{
+	width: 200px;
+}
+
+#menu2{
+	width: 200px;
+}
+
+#menu3{
+	width: 200px;
+}
+
+#menu4{
+	width: 200px;
+}
+.box-change {
+  width: 400px;
+  height: 400px;
+  width: 600px;
+}
+
+.active {
+  background: rgba(0,0,0, 0.5);
+  width: 100% !important;
+  height: 1000px !important;
+  border: 3px solid transparent !important;
+  cursor: inherit !important;
+}
+.disabled {
+  background: #eee;
+  color: #aaa;
+}
+#layer_intro{
+	-webkit-transition: padding-top 2s ease, margin-top 2s ease;
+	  -moz-transition: padding-top 2s ease, margin-top 2s ease;
+	  -o-transition: padding-top 2s ease, margin-top 2s ease;
+	  transition: padding-top 2s ease, margin-top 2s ease;
+}
+.layer_intro_active{
+	padding-top: 0px !important;
+	margin-top: 0px !important;
+}
+#layer{
+	-webkit-transition: margin-top 2s ease;
+	  -moz-transition: margin-top 2s ease;
+	  -o-transition: margin-top 2s ease;
+	  transition: margin-top 2s ease;
+}
+.layer_active{
+	margin-top: 0px !important;
+}
+
+
+
+
+
+
+/*About page csss*/
+
+
+.about_me{
+	display: block !important;
+	position: absolute !important;
+	z-index: 10007;
+	top: 74px;
+	color: rgb(255, 255, 255);
+	width: 100%;
+}
+

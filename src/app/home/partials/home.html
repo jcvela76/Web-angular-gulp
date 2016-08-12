@@ -1,0 +1,32 @@
+<div id="top_ico"></div>
+<div id="close_ico" ng-click="ctrl.close_menu()">X</div>
+<div id="layer" class="julio" data-id="345" ng-class="{'layer_active': ctrl.isActive}">
+            
+        <video width="1920" loop autoplay class="video-background" id="vid">
+          <source src="assets/video/movie.mp4" type="video/mp4">
+          <source src="assets/video/movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+        </div>
+
+
+
+ <div id="layer_intro" ng-class="{'layer_intro_active': ctrl.isActive}">
+            <phoneList></phoneList>
+            <div class="subtitle fancy"><div id="menu1" ng-class="{'active': ctrl.isActive_menu_1}" ng-click="ctrl.open_menu_1()">About Me</div></div>
+
+            <div class="subtitle fancy"><div id="menu2" ng-class="{'active': ctrl.isActive_menu_2}" ng-click="ctrl.open_menu_2()">Portafolio</div ></div>
+
+            <h1>{Julio Vela: </h1>
+            <h1 ng-bind="ctrl.skill"></h1>
+            <h1 id="promt_" ng-bind="ctrl.promt">_</h1>
+            <h1>}</h1>
+             <div>
+                <div id="scroll_sign">>></div>
+                <div id="coming">coming soon</div>
+            </div> 
+            <div class="subtitle fancy"><div id="menu3">Projects</div ></div>
+
+            <div class="subtitle fancy"><div id="menu4">Contact Me</div ></div>
+            <div ui-view="aboutView" class="about_me"></div >
+      </div>   
